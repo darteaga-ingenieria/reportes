@@ -1,0 +1,36 @@
+import z from "zod";
+
+export const ReporteCuestionarioDetalleModelSchema = z.object({
+    cuestionarioId: z.number(),
+    cuestionarioNombre: z.string(),
+    anio: z.number(),
+    unidad: z.string(),
+    periodoId: z.number(),
+    periodoNombre: z.string(),
+    evaluacion_id: z.number(),
+    docenteId: z.number(),
+    docenteNombre: z.string(),
+    docenteApellido: z.string(),
+    cursoId: z.number(),
+    cursoNombre: z.string(),
+    seccionId: z.number(),
+    seccionNombre: z.string(),
+    destinoTipo: z.string(),
+    destinoId: z.number(),
+    destinoNombre: z.string(),
+    invitacionId: z.number(),
+    respuestaId: z.number(),
+    evaluacionPreguntaId: z.number(),
+    ordenPlantilla: z.number(),
+    preguntaId: z.number(),
+    preguntaTexto: z.string(),
+    tipoPreguntaId: z.number(),
+    tipoPreguntaNombre: z.string(),
+    respuestaOpcionId: z.number().nullable(),
+    respuestaOpcionDescripcion: z.string().nullable(),
+    respuestaOpcionValor: z.number().nullable(),
+    respuestaTexto: z.string().nullable(),
+    totalInvitaciones: z.number(),
+});
+
+export type ReporteCuestionarioDetalleModel = z.infer<typeof ReporteCuestionarioDetalleModelSchema>;
